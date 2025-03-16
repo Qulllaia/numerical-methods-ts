@@ -73,7 +73,7 @@ export function chordMethod(
     x_n = chordMethodFunction(a, b);
     counter += 1;
     
-    if (functionResult(x_n-e) * functionResult(x_n+e) < e) break;
+    if (functionResult(x_n-e) * functionResult(x_n+e) < 0) break;
 
     let f_1: number = functionResult(a);
     let f_2: number = functionResult(x_n);
@@ -98,9 +98,8 @@ export function NewtonMethod(
   x_0: number
 ): Result | null {
 
-  let x0: number = functionNewtonMethodX(x_0);
-  let x: number = x0;
-  let xNext: number = functionNewtonMethodX(x0);
+  let x: number = functionNewtonMethodX(x_0);
+  let xNext: number = functionNewtonMethodX(x);
   let counter: number = 0;
 
   while (true) {
