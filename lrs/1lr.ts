@@ -1,4 +1,4 @@
-import { dichotomyMethod, simpleIterationsMethod } from "./mathMethods";
+import { dichotomyMethod, simpleIterationsMethod } from "../mathMethods";
 
 const _prompt = require("prompt-sync")();
 
